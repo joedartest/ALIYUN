@@ -1,0 +1,32 @@
+<?php
+include $_SERVER['DOCUMENT_ROOT'].'/WEB2018/_PROGRAM_/return.data.php';
+
+/**
+* 接受用户登陆时提交的验证码
+*/
+
+// 开启session
+session_start();
+
+// 1 获取到用户提交的验证码
+// $captchaImage = $_POST['captchaImage'];
+empty($_REQUEST['captchaImage']) ? $captchaImage = '' : $captchaImage = $_REQUEST['captchaImage'];
+
+echo $_SESSION['captchaImage'];
+
+if(!$captchaImage){
+	returnData('false','no captchaImage request','');
+	exit;
+}
+
+// 2 将session中的验证码和用户提交的验证码进行核对
+// 	当成功时提示验证码正确，并销毁之前的session值
+//  不成功则重新提交
+if(strtolower($_SESSION['captchaImage']) == strtolower($captchaImage)){
+// if($_SESSION['captchaImage'] == $captchaImage){
+    $_SESSION['captchaImage'] = '';
+	returnData('true','','');
+}else{
+	returnData('false','验证码提交不正确','');
+}
+?>

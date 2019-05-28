@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+._RESUME_ a {color:dodgerblue;}
+
+._RESUME_ > .name {padding:.7em 0; padding-bottom:.3em; margin-bottom:.8em; border-bottom:1px rgba(150,150,150,.5) solid;}
+._RESUME_ > .name > span {display:table; position:relative; padding-left:1em; height:2em; line-height:2em;}
+._RESUME_ > .name > span:before,
+._RESUME_ > .name > span:after {position:absolute; content:""; background:deepskyblue; height:2em; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._RESUME_ > .name > span:before {left:0; width:.4em;}
+._RESUME_ > .name > span:after {left:.5em; width:.15em;}
+._RESUME_ > .name > span > b {font-size:1.1em;}
+._RESUME_ > .name > span > i {position:absolute; left:100%; margin-left:.5em; font-style:normal; font-weight:bold; white-space:nowrap;}
+
+
+._RESUME_ .infoList > ul > li {float:left; padding:.25em 0;}
+._RESUME_ .infoList > ul > li.l1 {width:100%;}
+._RESUME_ .infoList > ul > li.l2 {width:50%;}
+._RESUME_ .infoList > ul > li.l3 {width:33.33%;}
+._RESUME_ .infoList > ul > li.l4 {width:25%;}
+._RESUME_ .infoList > ul > li > .tit {float:left; position:relative; width:5em; opacity:.5;}
+._RESUME_ .infoList > ul > li > .tit:after {position:absolute; right:0; content:":";}
+._RESUME_ .infoList > ul > li > .con {margin-left:5.5em;}
+@media screen and (max-width:640px) {
+	._RESUME_ .infoList > ul > li.l2,
+	._RESUME_ .infoList > ul > li.l3,
+	._RESUME_ .infoList > ul > li.l4 {width:100%;}
+}
+
+._RESUME_ > .infoText > * {padding:.25em 0;}
+
+
+._RESUME_ .workList > ul > li {padding-bottom:1.5em; padding-top:1.5em; border-top:1px rgba(127,127,127,.4) dashed;}
+._RESUME_ .workList > ul > li:first-child {padding-top:.5em; border-top:0;}
+._RESUME_ .workList .dd {width:60%;}
+._RESUME_ .workList .dd > * {float:left; width:50%;}
+._RESUME_ .workList .dd > *.department > * {margin-right:.5em;}
+@media screen and (max-width:640px) {
+	._RESUME_ .workList .dd {width:100%;}
+}
+
+._RESUME_ .photo {width:20em; margin-top:.5em;}
+._RESUME_ .photo:first-child {margin-top:0;}
+._RESUME_ .photo > span {display:block; font-size:.9em; height:2.4em; line-height:2.4em; text-align:center; background:dodgerblue; color:#fff;}
+._RESUME_ .photo > img {width:100%;}
+@media screen and (max-width:640px) {
+	._RESUME_ .photo {width:100%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

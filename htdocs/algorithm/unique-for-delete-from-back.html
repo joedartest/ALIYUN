@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数组去重 - 从后面删除</title>
+<style type="text/css">
+body {background:#333; color:#eee;}
+</style>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+//-----------------------------------
+// 思路：
+// 嵌套循环 第n的值与第n+1的值对比
+// 如果相同 则删除第n+1的值 小循环递减
+//-----------------------------------
+function unique(arr){
+	for(var i=0; i<arr.length-1; i++){
+		var item = arr[i];
+		for(var j=i+1; j<arr.length; j++){
+			if(item == arr[j]){
+				arr.splice(j,1);
+				j--;
+			}
+		}
+	}
+	return arr;
+}
+var arr = unique([3,5,9,54,8,54,3,76,9,0,2]);
+console.log(arr);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+._BANNER_ .slide {height:25em;}
+._BANNER_ .slide.banner {background:url(/autism/images/index-banner-01.jpg) center no-repeat; background-size:cover;}
+@media screen and (max-width:640px) {
+	._BANNER_ .slide {height:15em;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

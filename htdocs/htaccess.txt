@@ -1,0 +1,153 @@
+<FilesMatch "\.(bak|inc|lib|sh|tpl|lbi|dwt)$">
+    order deny,allow
+    deny from all
+</FilesMatch>
+
+RewriteEngine On
+#RewriteBase /
+
+# 404页面
+ErrorDocument 404 /NotFound/index.html
+
+# 第三方授权登录
+RewriteRule ^oauth\/([a-zA-Z0-9\-\.]+)$						oauth/$1\.php [L]
+
+
+#===============================
+#-------------------------------
+#         	PUBLIC
+#-------------------------------
+#===============================
+RewriteRule ^CSS\.([a-zA-Z0-9\-\.]+)						PUBLIC/css/$1\.css [L]
+RewriteRule ^JS\.([a-zA-Z0-9\-\.]+)							PUBLIC/js/$1\.js [L]
+RewriteRule ^VUE\.([a-zA-Z0-9\-\.]+)						PUBLIC/vue/vue\.$1\.js [L]
+RewriteRule ^ico\.([a-zA-Z0-9\-\.]+)						PUBLIC/ico/$1/favicon\.ico [L]
+RewriteRule ^logo\.([a-zA-Z0-9\-\.]+)						PUBLIC/logo/$1\.png [L]
+RewriteRule ^widget\/([a-zA-Z0-9\-\.\/]+)					PUBLIC/widget/$1 [L]
+
+
+#===============================
+#-------------------------------
+#           /AUTISM
+#-------------------------------
+#===============================
+# // 前台页面
+RewriteRule ^autism\/page\/([a-zA-Z0-9\-\.]+)$									ROOTAUTISM/PAGE/front/$1/index\.php [L]
+RewriteRule ^autism\/page\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$						ROOTAUTISM/PAGE/front/$1/$2\.php [L]
+RewriteRule ^autism\/page\/([a-zA-Z]+)\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$		ROOTAUTISM/PAGE/front/$1/$2/$3\.php [L]
+# // 后台页面
+RewriteRule ^autism\/platform\/([a-zA-Z0-9\-\.]+)$								ROOTAUTISM/PAGE/platform/$1/index\.php [L]
+RewriteRule ^autism\/platform\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$					ROOTAUTISM/PAGE/platform/$1/$2\.php [L]
+RewriteRule ^autism\/platform\/([a-zA-Z]+)\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$	ROOTAUTISM/PAGE/platform/$1/$2/$3\.php [L]
+# // css|images|js
+RewriteRule ^autism\/css\/([a-zA-Z0-9\-\.]+)$									ROOTAUTISM/CUSTOM/css/$1\.css [L]
+RewriteRule ^autism\/images\/([a-zA-Z0-9\-\.]+)$								ROOTAUTISM/CUSTOM/images/$1 [L]
+RewriteRule ^autism\/images\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$					ROOTAUTISM/CUSTOM/images/$1/$2 [L]
+RewriteRule ^autism\/images\/([a-zA-Z]+)\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$		ROOTAUTISM/CUSTOM/images/$1/$2/$3 [L]
+RewriteRule ^autism\/js\/([a-zA-Z0-9\-\.]+)$									ROOTAUTISM/CUSTOM/js/$1\.js [L]
+RewriteRule ^autism\/js\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$						ROOTAUTISM/CUSTOM/js/$1/$2\.js [L]
+RewriteRule ^autism\/js\/([a-zA-Z]+)\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$			ROOTAUTISM/CUSTOM/js/$1/$2/$3\.js [L]
+# // 请求接口 -  apply
+RewriteRule ^autism\/apply\/([a-zA-Z0-9\-\.]+)$									ROOTAUTISM/PROGRAM/$1\.php [L]
+RewriteRule ^autism\/apply\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$					ROOTAUTISM/PROGRAM/$1/$2\.php [L]
+RewriteRule ^autism\/apply\/([a-zA-Z]+)\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$		ROOTAUTISM/PROGRAM/$1/$2/$3\.php [L]
+# // 个人简历
+RewriteRule ^resume$	ROOTAUTISM/PAGE/front/resume/index\.php [L]
+# // 张嘉煜成长日记
+RewriteRule ^grow$				ROOTAUTISM/PAGE/front/grow/index\.php [L]
+
+
+
+
+
+
+#===============================
+#-------------------------------
+#         JOEDAR.COM
+#-------------------------------
+#===============================
+# 工程师 - personal
+#-------------------------------
+# // 前台一级展示页面
+RewriteRule ^personal\/page\/([a-zA-Z0-9\-\.]+)$					ROOTJOEDAR/PAGE/front/$1\.php [L]
+# // 前台二级展示页面
+RewriteRule ^personal\/page\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$		ROOTJOEDAR/PAGE/front/$1/$2\.php [L]
+# // 前台三级展示页面
+RewriteRule ^personal\/page\/([a-zA-Z]+)\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$		ROOTJOEDAR/PAGE/front/$1/$2/$3\.php [L]
+# // 管理员后台页面
+RewriteRule ^personal\/admin\/([a-zA-Z0-9\-\.]+)$					ROOTJOEDAR/PAGE/platform/$1\.php [L]
+RewriteRule ^personal\/admin\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$		ROOTJOEDAR/PAGE/platform/$1/$2\.php [L]
+# // 程序目录文件
+RewriteRule ^personal\/apply\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$					ROOTJOEDAR/PROGRAM/$1/$2\.php [L]
+RewriteRule ^personal\/apply\/([a-zA-Z]+)\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$		ROOTJOEDAR/PROGRAM/$1/$2/$3\.php [L]
+# // css|images|js
+RewriteRule ^personal\/css\/([a-zA-Z0-9\-\.]+)$						ROOTJOEDAR/CUSTOM/css/$1\.css [L]
+RewriteRule ^personal\/images\/([a-zA-Z0-9\-\.]+)$					ROOTJOEDAR/CUSTOM/images/$1 [L]
+RewriteRule ^personal\/images\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$		ROOTJOEDAR/CUSTOM/images/$1/$2 [L]
+RewriteRule ^personal\/images\/([a-zA-Z]+)\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$		ROOTJOEDAR/CUSTOM/images/$1/$2/$3 [L]
+RewriteRule ^personal\/js\/([a-zA-Z0-9\-\.]+)$						ROOTJOEDAR/CUSTOM/js/$1\.js [L]
+RewriteRule ^personal\/js\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$			ROOTJOEDAR/CUSTOM/js/$1/$2\.js [L]
+RewriteRule ^personal\/js\/([a-zA-Z]+)\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$			ROOTJOEDAR/CUSTOM/js/$1/$2/$3\.js [L]
+# // 管理员后台
+RewriteRule ^admin\.joedar$											personal/admin/login [L]
+
+
+
+
+#===============================
+#-------------------------------
+#         WWWJ.COM.CN
+#-------------------------------
+#===============================
+# 电影 - run
+#-------------------------------
+# // 前台一级展示页面
+RewriteRule ^run\/page\/([a-zA-Z0-9\-\.]+)$							ROOTWWWJ/PAGE/front/$1\.php [L]
+# // 前台二级展示页面
+RewriteRule ^run\/page\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$			ROOTWWWJ/PAGE/front/$1/$2\.php [L]
+# // 管理员后台页面
+RewriteRule ^run\/admin\/([a-zA-Z0-9\-\.]+)$						ROOTWWWJ/PAGE/platform/$1\.php [L]
+RewriteRule ^run\/admin\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$			ROOTWWWJ/PAGE/platform/$1/$2\.php [L]
+# // 程序目录文件
+RewriteRule ^run\/program\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$			ROOTWWWJ/PROGRAM/$1/$2\.php [L]
+# // css|images|js
+RewriteRule ^run\/css\/([a-zA-Z0-9\-\.]+)$							ROOTJOEDAR/CUSTOM/css/$1\.css [L]
+RewriteRule ^run\/images\/([a-zA-Z0-9\-\.]+)$						ROOTJOEDAR/CUSTOM/images/$1 [L]
+RewriteRule ^run\/js\/([a-zA-Z0-9\-\.]+)$							ROOTJOEDAR/CUSTOM/js/$1\.js [L]
+
+
+
+#===============================
+#-------------------------------
+#         ZMEAN.COM
+#-------------------------------
+#===============================
+# 电影 - know
+#-------------------------------
+# // 前台一级展示页面
+RewriteRule ^know\/page\/([a-zA-Z0-9\-\.]+)$						ROOTZMEAN/PAGE/front/$1\.php [L]
+# // 前台二级展示页面
+RewriteRule ^know\/page\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$			ROOTZMEAN/PAGE/front/$1/$2\.php [L]
+# // 管理员后台页面
+RewriteRule ^know\/admin\/([a-zA-Z0-9\-\.]+)$						ROOTZMEAN/PAGE/platform/$1\.php [L]
+RewriteRule ^know\/admin\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$			ROOTZMEAN/PAGE/platform/$1/$2\.php [L]
+# // 程序目录文件
+RewriteRule ^know\/program\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$		ROOTZMEAN/PROGRAM/$1/$2\.php [L]
+# // css|images|js
+RewriteRule ^know\/css\/([a-zA-Z0-9\-\.]+)$							ROOTJOEDAR/CUSTOM/css/$1\.css [L]
+RewriteRule ^know\/images\/([a-zA-Z0-9\-\.]+)$						ROOTJOEDAR/CUSTOM/images/$1 [L]
+RewriteRule ^know\/js\/([a-zA-Z0-9\-\.]+)$							ROOTJOEDAR/CUSTOM/js/$1\.js [L]
+
+
+
+#===============================
+#-------------------------------
+#         PHPORGRAM
+#-------------------------------
+#===============================
+# 请求接口 -  APPLY
+#-------------------------------
+RewriteRule ^APPLY\/([a-zA-Z0-9\-\.]+)$								PHPROGRAM/$1\.php [L]
+RewriteRule ^APPLY\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$				PHPROGRAM/$1/$2\.php [L]
+RewriteRule ^APPLY\/([a-zA-Z]+)\/([a-zA-Z]+)\/([a-zA-Z0-9\-\.]+)$	PHPROGRAM/$1/$2/$3\.php [L]
+

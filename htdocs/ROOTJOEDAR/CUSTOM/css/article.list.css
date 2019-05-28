@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+
+._ARTICLELIST_ {background:rgba(0,0,0,.4);}
+._ARTICLELIST_ > * {margin:0 .7em;}
+
+._ARTICLELIST_ .TABCARDS {height:3em; border-bottom:1px rgba(255,255,255,.1) solid;}
+._ARTICLELIST_ .TABCARDS > * {float:left; position:relative; margin:0 1em; height:3em; line-height:3em; cursor:pointer; opacity:.7;}
+._ARTICLELIST_ .TABCARDS > *:before {position:absolute; width:100%; height:3px; left:0; bottom:0; content:""; background:orange; visibility:hidden;}
+._ARTICLELIST_ .TABCARDS > *.active {font-weight:bold; opacity:1;}
+._ARTICLELIST_ .TABCARDS > *.active:before {visibility:visible;}
+
+._ARTICLELIST_ .LIST > ul > li {padding:1.2em 0; border-top:1px rgba(255,255,255,.1) solid;}
+
+._ARTICLELIST_ .LIST .articles > .title > * {font-size:1.1em; font-weight:bold; color:#ccc;}
+._ARTICLELIST_ .LIST .articles > .title > *:hover {color:darkorange;}
+
+._ARTICLELIST_ .LIST .articles > .content {margin-top:.5em;}
+._ARTICLELIST_ .LIST .articles > .content > .content-media {float:left; width:13em;}
+._ARTICLELIST_ .LIST .articles > .content > .content-media > .media {position:relative; width:100%; padding-bottom:56%; border-radius:.3em; overflow:hidden;}
+._ARTICLELIST_ .LIST .articles > .content > .content-media > .media > img {position:absolute; width:100%; left:0; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._ARTICLELIST_ .LIST .articles > .content > .content-text > .text {font-size:.9em; opacity:.7;}
+._ARTICLELIST_ .LIST .articles > .content > .content-text > .text {display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden;}
+
+._ARTICLELIST_ .LIST .articles > .content.hasMedia > .content-text {margin-left:14em;}
+._ARTICLELIST_ .LIST .articles > .content.hasMedia > .content-text > .text {-webkit-line-clamp:6;}
+
+
+._ARTICLELIST_ .LIST .articles > .user-operate {margin-top:.7em;}
+._ARTICLELIST_ .LIST .articles > .user-operate > * {float:left; height:2em; margin-left:1em;}
+._ARTICLELIST_ .LIST .articles > .user-operate > *:first-child {margin-left:0;}
+._ARTICLELIST_ .LIST .articles > .user-operate > * > .vote {display:table; position:relative; height:2em; line-height:2em; padding:0 .7em; cursor:pointer; border-radius:.3em;}
+._ARTICLELIST_ .LIST .articles > .user-operate > * > .vote {padding-left:2em;}
+._ARTICLELIST_ .LIST .articles > .user-operate > * > .vote > span {font-size:.9em;}
+._ARTICLELIST_ .LIST .articles > .user-operate > * > .vote:before {position:absolute; left:.6em; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._ARTICLELIST_ .LIST .articles > .user-operate > * > .vote:before {font-family:awesome; content:"\f087"; font-size:1.2em;}
+._ARTICLELIST_ .LIST .articles > .user-operate > * > .vote.ex {background:rgba(255,255,255,.05); color:orange;}
+._ARTICLELIST_ .LIST .articles > .user-operate > * > .vote.ed {background:rgba(255,165,0,.85); color:#fff;}
+
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText {display:table;}
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText > * {display:table-cell; vertical-align:middle;}
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText > * > * {height:1.5em; line-height:1.5em; cursor:pointer; opacity:.8;}
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText > * > *:before {font-family:awesome; margin-right:.3em;}
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText > * > *:before,
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText > * > * > span {font-size:.95em;}
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText > * > .comments:before {content:"\f0e5";}
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText > * > .share:before {content:"\f1e0";}
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText > * > .collect:before {content:"\f005";}
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText > * > .comments.open {color:darkorange; opacity:1;}
+._ARTICLELIST_ .LIST .articles > .user-operate > *.iconText > * > *:hover {opacity:1;}
+
+._ARTICLELIST_ .LIST .articles > .user-comment {padding-top:.7em;}
+._ARTICLELIST_ .LIST .articles > .user-comment > .comment { background:rgba(255,255,255,.03); border-radius:.3em; padding:1em;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

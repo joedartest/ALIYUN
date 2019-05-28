@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数组去重 - filter</title>
+<style type="text/css">body {background:#333; color:#eee;}</style>
+</head>
+<body>
+
+<script type="text/javascript">
+// 数组过滤重复项filter
+function unique(arr){
+	return arr.filter(function(elem,pos,self){
+        // 如果没有重复项，返回true
+        return self.indexOf(elem,pos+1) === -1;
+    });
+}
+var arr = unique([3,5,9,54,8,54,3,76,9,0,2]);
+console.log(arr);
+</script>
+
+</body>
+</html>

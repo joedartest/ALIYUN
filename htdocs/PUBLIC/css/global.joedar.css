@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* global.joedar */
+/* orange (255,165,0) */
+
+._MW_ {width:990px;}
+@media screen and (max-width:640px) {._MW_ {width:100%;}}
+
+/*
+joedar.com theme is dark
+so, no body.DARK theme
+*/
+
+/*===== joedar.com BODY GLOBAL COLOR =====*/
+/*----- body DARK -----*/
+body {background:#303030; color:#ddd}
+body .BACKBODY {background:rgba(0,0,0,.5); color:#ddd;}
+body .BACKBODY input {background:#303030; color:#eee;}
+body .BACKBODY a {color:#ddd;}
+
+
+
+/*----- header background-color -----*/
+._HEADER_ > .HEADER {background:rgba(0,0,0,.5);}
+/*----- header box-shadow -----*/
+/*._HEADER_ > .HEADER {-webkit-box-shadow:0 0 .5em rgba(0,0,0,.5); box-shadow:0 0 .5em rgba(0,0,0,.5);}*/
+/*----- header logo -----*/
+._HEADER_ .header a.logo {background:url(/logo.joedar) left top no-repeat; background-position:0 0%; background-size:100% auto;}
+/*----- header a color -----*/
+._HEADER_ .header a {color:#eee;}
+/*----- header openMenu color -----*/
+._HEADER_ .header .openMenu > label > * {background:darkorange;}
+/*----- header POP CLOSE BTN color -----*/
+._HEADER_ .header .POPCLOSE > label > * {background:darkorange;}
+/*----- ICON SEARCH color -----*/
+._HEADER_ .header .ICONSEARCH:before {border:2px #eee solid;}
+._HEADER_ .header .ICONSEARCH:after {background:#eee;}
+/*----- header HEADERMENU a.active color -----*/
+._HEADER_ .header .HEADERMENU ul li > a.active {color:orange;}
+._HEADER_ .header .HEADERMENU ul li > a.active:before {background:orange;}
+._HEADER_ .header .HEADERMENU ul li > a.active:after {background:orange;}
+/*----- header(wap) HEADERMENU -----*/
+@media screen and (max-width:640px) {
+	._HEADER_ .header .HEADERMENU > .MENU {background:rgba(0,0,0,.5);}
+	._HEADER_ .header .HEADERMENU ul li {border-bottom:1px #555 solid;}
+	._HEADER_ .header .HEADERMENU ul li:first-child {border-top:1px #555 solid;}
+}
+/*----- header HEADER SEARCH color -----*/
+._HEADER_ .header .HEADERSEARCH .put > input {width:2.5em; background:rgba(0,0,0,.5); color:#eee;}
+._HEADER_ .header .HEADERSEARCH .put > input:focus {width:10em; background:#444;}
+@media screen and (max-width:640px) {
+	._HEADER_ .header .HEADERSEARCH .search .form {background:rgba(0,0,0,.5);}
+	._HEADER_ .header .HEADERSEARCH .put > input {width:20em; background:#333; color:#eee;}
+	._HEADER_ .header .HEADERSEARCH .put > input:focus {width:20em; background:#444;}
+}
+
+
+
+
+._BANNER_ > .BANNER > .banner {position:relative; height:40em;}
+._BANNER_ > .BANNER > .banner > .text {position:absolute; width:100%; left:0; text-align:center;}
+._BANNER_ > .BANNER > .banner > .text.big {top:20%;}
+._BANNER_ > .BANNER > .banner > .text.big > * {font-size:5em; color:#fff;}
+._BANNER_ > .BANNER > .banner.stack {background:url(/personal/images/banner.stack.001.jpg) center no-repeat;}
+._BANNER_ > .BANNER > .banner.design {background:url(/personal/images/banner.design.002.jpg) center no-repeat;}
+
+
+._LAYOUT_ {margin-top:.5em; position:relative;}
+._LAYOUT_ > .layout-left {width:70%;}
+._LAYOUT_ > .layout-right {position:absolute; top:0; right:0; width:28%;}
+@media screen and (max-width:640px) {
+	._LAYOUT_ {margin-top:.3em;}
+	._LAYOUT_ > .layout-left {width:100%;}
+	._LAYOUT_ > .layout-right {visibility:hidden;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

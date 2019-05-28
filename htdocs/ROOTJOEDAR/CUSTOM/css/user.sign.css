@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+._SIGN_ {padding-top:1em;}
+._SIGN_ > .sign {width:70%; margin:0 auto; background:rgba(0,0,0,.6);}
+@media screen and (max-width:640px) {
+	._SIGN_ {padding-top:0; height:94%;}
+	._SIGN_ > .sign {width:100%; height:100%;}
+}
+
+._SIGN_ > .sign > .head {height:10em; position:relative;}
+@media screen and (max-width:640px) {._SIGN_ > .sign > .head {height:7em;}}
+._SIGN_ > .sign > .head:before,
+._SIGN_ > .sign > .head:after {position:absolute; width:100%; text-align:center; color:orange;}
+._SIGN_ > .sign > .head:before {bottom:50%; font-size:1.7em; font-weight:bold;}
+._SIGN_ > .sign > .head:after {top:50%; font-size:.9em;}
+._SIGN_ > .sign.up > .head:before {content:"会员注册";}
+._SIGN_ > .sign.up > .head:after {content:"Create Your Personal Account";}
+._SIGN_ > .sign.up.success > .head:before {content:"恭喜！注册成功";}
+._SIGN_ > .sign.up.success > .head:after {content:"Congratulations For Sign Up Successful";}
+._SIGN_ > .sign.in > .head:before {content:"会员登录";}
+._SIGN_ > .sign.in > .head:after {content:"Please Sign In Your Account";}
+._SIGN_ > .sign.find > .head:before {content:"找回密码";}
+._SIGN_ > .sign.find > .head:after {content:"Retrieve Password";}
+._SIGN_ > .sign.setPassword > .head:before {content:"设置密码";}
+._SIGN_ > .sign.setPassword > .head:after {content:"Set Your New Password";}
+
+._SIGN_ > .sign > .form {margin:0 1em; padding-bottom:2em;}
+._SIGN_ > .sign > .form > .part > .put {position:relative;}
+._SIGN_ > .sign > .form > .part > .put > input {width:100%; border:none; outline:none; background:none; color:#fff; border-bottom:1px #666 solid;}
+._SIGN_ > .sign > .form > .part > .put > input {font-size:1.05em; height:2em;}
+._SIGN_ > .sign > .form > .part > .put > input:focus {border-bottom:1px #ccc solid;}
+._SIGN_ > .sign > .form > .part > .put > input.error {border-bottom:1px red solid;}
+
+._SIGN_ > .sign > .form > .part > .put > .tip {height:1.5em; line-height:1.2em; padding-left:1.3em; position:relative;}
+._SIGN_ > .sign > .form > .part > .put > .tip:before {position:absolute; left:0;}
+._SIGN_ > .sign > .form > .part > .put > .tip:before {font-family:awesome; font-size:1.1em; line-height:1.25em;}
+._SIGN_ > .sign > .form > .part > .put > .tip.error:before {content:"\f00d";}
+._SIGN_ > .sign > .form > .part > .put > .tip.ok:before {content:"\f00c";}
+._SIGN_ > .sign > .form > .part > .put > .tip.error {color:red;}
+._SIGN_ > .sign > .form > .part > .put > .tip.ok {color:green;}
+._SIGN_ > .sign > .form > .part > .put > .tip > * {font-size:.9em;}
+
+._SIGN_ > .sign > .form > .part > .put > .abs_tr {position:absolute; top:0; right:0; cursor:pointer;}
+._SIGN_ > .sign > .form > .part > .put > .abs_tr > .btn {display:table; height:1.7em; line-height:1.7em; text-align:center; padding:0 .7em; border-radius:.85em;}
+._SIGN_ > .sign > .form > .part > .put > .abs_tr > .btn {background:orange; color:#fff;}
+._SIGN_ > .sign > .form > .part > .put > .abs_tr > .btn.disabled {background:#999; color:#ccc;}
+._SIGN_ > .sign > .form > .part > .put > .abs_tr > .btn > * {font-size:.9em;}
+
+._SIGN_ > .sign > .form > .part > .button > .btn {display:table; width:50%; margin:0 auto; text-align:center; height:2.4em; line-height:2.4em; background:orange; color:#fff; border-radius:1.2em;}
+._SIGN_ > .sign > .form > .part > .button > .btn {cursor:pointer;}
+._SIGN_ > .sign > .form > .part > .button > .btn > * {font-size:1.1em;}
+@media screen and (max-width:640px) {._SIGN_ > .sign > .form > .part > .button > .btn {width:90%;}}
+
+._SIGN_ > .sign > .form > .part > .text {padding-top:1.3em; text-align:center;}
+._SIGN_ > .sign > .form > .part > .text > * {color:#ccc;}
+._SIGN_ > .sign > .form > .part > .text > a {color:orange;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

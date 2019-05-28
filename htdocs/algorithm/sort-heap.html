@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sort heap - 堆排序算法</title>
+<style type="text/css">body {background:#333; color:#eee;}</style>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+var SORT = (function(){
+	return {
+		// 用来存放堆的数组
+		h : []
+		// 用来存储堆中元素的个数，也就是堆的大小
+		,n : 0
+
+		// 交换函数，交换堆中两个元素的值
+		,swap : function(x,y){
+			var t = this.h[x];
+			this.h[x] = this.h[y];
+			this.h[y] = t;
+		}
+
+		// 向下调整函数
+		,siftdown : function(i){
+			//-----------------------------------
+			// 传入一个需要向下调整的节点编号i
+			// 这里传入1，即从堆的顶点开始向下调整
+			//-----------------------------------
+			// flag用来标记是否需要继续向下调整
+			var flag = 0;
+			// 记录节点编号
+			var t;
+
+			//---------------------------------
+			// 当i节点有儿子(其实至少有左儿子)
+			// 并且需要继续调整的时候循环就执行
+			//---------------------------------
+			while(i*2 <= this.n && flag === 0){
+				//----------------------------
+				// 首先判断它和左儿子的关系
+				// 并用t记录值较小的节点编号
+				//----------------------------
+				var leftChildIndex = (i*2)+1;
+				var rightChildIndex = (i*2)+2;
+				// 如果数组的第i个值 > 数组中的左儿子的值
+				if(this.h[i] > this.h[leftChildIndex]){
+					// t就为数组中左儿子的编号
+					t = leftChildIndex;
+				// 否则
+				}else{
+					// t就是数组中第i个值的编号
+					t = i;
+				}
+
+				//-----------------------------------
+				// 如果它有右儿子，再对右儿子进行讨论
+				//-----------------------------------
+				// 如果右儿子的编号 <= 该数组的长度
+				if(rightChildIndex <= this.n){
+					//--------------------
+					// 如果右儿子的值更小
+					// 更新较小的节点编号
+					//--------------------
+					// 如果数组的第t个值 > 数组中右儿子的值
+					if(this.h[t] > this.h[rightChildIndex]){
+						// t就为数组中右儿子的编号
+						t = rightChildIndex;
+					}
+				}
+
+				//-------------------------------
+				// 如果发现最小的节点编号不是自己
+				// 说明子节点中有比父节点更小的
+				//-------------------------------
+				if(t !== i){
+					// 交换他们
+					this.swap(t,i);
+					//-----------------------------------
+					// 更新i为刚才与他交换的儿子节点的编号
+					// 便于接下来继续向下调整
+					//-----------------------------------
+					i = t;
+				}else{
+					flag = 1;
+				}
+			}
+		}
+
+		// 建立堆的函数
+		,create : function(){
+			// 从最后一个非右节点到第一个节点依次进行向上调整
+			for(var i=(this.n/2); i>=0; i--){
+				// 向下调整
+				this.siftdown(i);
+			}
+		}
+
+		// 删除最大的元素
+		,deleteMax : function(){
+			// 用一个临时变量记录堆顶点的值
+			var t = this.h[0];
+			// 将堆最后一个点赋值到堆顶
+			this.h[0] = this.h[this.n];
+			// 堆的元素数减1
+			this.n--;
+			// 向下调整(相当于重建堆)
+			this.siftdown(0);
+			return t;
+		}
+
+		,heap : function(arr){
+			this.h = arr;
+			var num = arr.length;
+
+			this.n = num - 1;
+
+			// 建堆
+			this.create();
+
+			var sortedArr = [];
+			for(var i=0; i<=num; i++){
+				sortedArr.push(this.deleteMax());
+			}
+			return sortedArr;
+		}
+	}
+}());
+
+var arr = SORT.heap([26,37,12,6,30,42,57,98,73]);
+console.log(arr);
+
+</script>
+
+</body>
+</html>

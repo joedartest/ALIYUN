@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+._TUTORIAL_.LIST > .list > ul {width:102%; margin-left:-2%;}
+._TUTORIAL_.LIST > .list > ul > li {float:left; width:31.33%; margin-left:2%; margin-bottom:2%;}
+._TUTORIAL_.LIST > .list .item > .image {position:relative; display:block; width:100%; padding-bottom:56%;}
+._TUTORIAL_.LIST > .list .item > .image > * {position:absolute; background:deepskyblue; width:100%; height:100%; top:0; left:0; border-radius:.3em; overflow:hidden;}
+._TUTORIAL_.LIST > .list .item > .image > *.txt .text > * {display:block; margin:0 1%; white-space:nowrap;}
+._TUTORIAL_.LIST > .list .item > .image > *.txt .text > b {font-size:1.4em; color:rgba(255,255,255,1);}
+._TUTORIAL_.LIST > .list .item > .image > *.txt .text > span {font-size:.95em; color:rgba(255,255,255,.7);}
+._TUTORIAL_.LIST > .list .item > .image > *.img > img {position:absolute; width:100%; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._TUTORIAL_.LIST > .list .item > .tit {margin-top:.3em;}
+._TUTORIAL_.LIST > .list .item > .tit > a {display:block; font-size:.95em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+._TUTORIAL_.LIST > .list .item > .explain {position:relative;}
+._TUTORIAL_.LIST > .list .item > .explain > * {font-size:.9em;}
+._TUTORIAL_.LIST > .list .item > .explain > *.des {opacity:.7;}
+._TUTORIAL_.LIST > .list .item > .explain > *.price {position:absolute; right:0; color:#f33; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+@media screen and (max-width:640px) {
+	._TUTORIAL_.LIST > .list > ul {width:104%; margin-left:-4%;}
+	._TUTORIAL_.LIST > .list > ul > li {width:46%; margin-left:4%; margin-bottom:4%;}
+	._TUTORIAL_.LIST > .list .item > .image > *.txt .text > b {font-size:.9em;}
+	._TUTORIAL_.LIST > .list .item > .image > *.txt .text > span {font-size:.7em;}
+	._TUTORIAL_.LIST > .list .item > .tit > a {font-size:.85em;}
+}
+
+
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数组去重 - 判断对象属性</title>
+<style type="text/css">
+body {background:#333; color:#eee;}
+</style>
+</head>
+<body>
+
+
+<script type="text/javascript">
+//-----------------------------------------------------------
+// 思路：
+// 定义变量 v
+// 定义变量 r = []
+// 定义变量 o = {}
+// 循环条件为 : 将arr[i]的值赋给v 如果不是undefined 就一直循环
+// 判断对象[v]的值 如果不是true 就将v推入数组r 并且o[v]为true
+// 依次循环 就将重复的值排除在外了
+//-----------------------------------------------------------
+function unique(arr){
+	var v, r = [], o = {};
+	for(var i=0; (v = arr[i]) !== undefined; i++) {
+        // !o[v] && (r.push(v), o[v] = true);
+        if(!o[v]){
+        	r.push(v);
+        	o[v] = true;
+        }
+    }
+    return r;
+}
+var arr = unique([1,2,3,3,4,4,4,5,6,7,8,9,9,9]);
+console.log(arr);
+
+</script>
+
+</body>
+</html>

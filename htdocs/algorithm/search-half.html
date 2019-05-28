@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>search half - 二分查找算法</title>
+<style type="text/css">body {background:#333; color:#eee;}</style>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+//-------------------------------------------------------------------------
+// 二分查找算法是一种在有序数组中查找某一特定元素的搜索算法
+// 搜素过程从数组的中间元素开始
+// 如果中间元素正好是要查找的元素，则搜素过程结束；
+// 如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找
+// 而且跟开始一样从中间元素开始比较
+// 如果在某一步骤数组为空，则代表找不到
+// 这种搜索算法每一次比较都使搜索范围缩小一半
+// 折半搜索每次把搜索区域减少一半，时间复杂度为Ο(logn)
+//-------------------------------------------------------------------------
+var SEARCH = (function(){
+	return {
+		half : function(arr,n){
+			// 数组的长度
+			var len = arr.length;
+			// 编号 7的中间值3.5为3
+			var mid = Math.floor(len/2);
+			// 该编号的值
+			var num = arr[mid];
+
+			// 如果数组长度为0 直接返回null
+			if(len === 0){
+				return null;
+			}
+			// 如果该编号的值 === n
+			else if(num === n){
+				// 返回该编号的值或true num|true
+				return true;
+			}
+			// 如果该编号的值 > n
+			else if(num > n){
+				return this.half(arr.slice(0,mid),n);
+			}else{
+				return this.half(arr.slice(mid+1),n);
+			}
+		}
+	}
+}());
+
+var result = SEARCH.half([11,12,13,14,15,16,17],13);
+console.log(result);
+
+// var arr = [1,2,3,4,5];
+// var arr2 = arr.shift();
+// console.log(arr);
+// console.log(arr2);
+
+// console.log(parseInt(9/2));
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+._FORM_ {font-size:.9em; color:#ddd;}
+._FORM_ > ul {margin-bottom:1em;}
+._FORM_ > ul > li {min-height:2.4em;}
+._FORM_ > ul > li:first-child {float:left; line-height:2.4em; text-align:right;}
+._FORM_ > ul > li:first-child > span {position:relative;}
+._FORM_ > ul > li:first-child > span:after {margin-left:.4em; content:":";}
+._FORM_ > ul > li:first-child > span.must:before {position:absolute; content:""; top:.3em; right:100%; margin-right:.3em;}
+._FORM_ > ul > li:first-child > span.must:before {width:5px; height:5px; background:red; border-radius:50%;}
+._FORM_ > ul > li:first-child {width:7em;}
+._FORM_ > ul > li:nth-of-type(2) {margin-left:8em;}
+/* .put */
+._FORM_ > ul > li > .put {position:relative; display:table;}
+._FORM_ > ul > li > .put > i.tip {position:absolute; left:100%; margin-left:.7em; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._FORM_ > ul > li > .put > i.tip {font-style:normal; white-space:nowrap;}
+._FORM_ > ul > li > .put > i.tip:before {position:absolute; content:""; left:0; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._FORM_ > ul > li > .put > i.tip:before {width:1.2em; height:1.2em; line-height:1.2em; text-align:center; border-radius:50%;}
+._FORM_ > ul > li > .put > i.tip:before {font-family:awesome;}
+._FORM_ > ul > li > .put > i.tip.ok:before {content:"\f00c"; color:green;}
+._FORM_ > ul > li > .put > i.tip.error {padding-left:1.3em; color:red;}
+._FORM_ > ul > li > .put > i.tip.error:before {content:"\f00d";}
+/* textarea 的 margin-top */
+._FORM_ > ul > li > .put.textarea {padding-top:.4em;}
+/* textarea 的 (i.tip) */
+._FORM_ > ul > li > .put.textarea > i.tip {top:1em; -webkit-transform:translateY(0); transform:translateY(0);}
+/* input|textarea 的 (width) */
+._FORM_ > ul > li > .put.input,
+._FORM_ > ul > li > .put.textarea {width:22em;}
+._FORM_ > ul > li > .put.input.short,
+._FORM_ > ul > li > .put.textarea.short {width:16em;}
+._FORM_ > ul > li > .put.input.long,
+._FORM_ > ul > li > .put.textarea.long {width:28em;}
+._FORM_ > ul > li > .put.input > input {width:100%;}
+._FORM_ > ul > li > .put.textarea > textarea {width:96%; padding:2%;}
+/* input|select 的 (height) */
+._FORM_ > ul > li > .put > input,
+._FORM_ > ul > li > .put > select {height:2.3em;}
+/* textarea 的 (height) */
+._FORM_ > ul > li > .put > textarea {height:10em; resize:none;}
+/* input|select|textarea 的 (border|background|color) */
+._FORM_ > ul > li > .put > input,
+._FORM_ > ul > li > .put > select,
+._FORM_ > ul > li > .put > textarea {border:1px #444 solid; background:#222; color:#ddd;}
+._FORM_ > ul > li > .put > input.error,
+._FORM_ > ul > li > .put > select.error,
+._FORM_ > ul > li > .put > textarea.error {border:1px red solid;}
+._FORM_ > ul > li > .put > input:focus,
+._FORM_ > ul > li > .put > select:focus,
+._FORM_ > ul > li > .put > textarea:focus {border:1px #666 solid;}
+/* input|select|textarea 的 (radius) */
+._FORM_ > ul > li > .put > input,
+._FORM_ > ul > li > .put > select,
+._FORM_ > ul > li > .put > textarea {border-radius:.3em;}
+/* input 的 缩进 */
+._FORM_ > ul > li > .put.input > input {text-indent:.7em;}
+/* input 的 字数 */
+._FORM_ > ul > li > .put.input > .zishu {position:absolute; height:2em; line-height:2em;}
+._FORM_ > ul > li > .put.input > .zishu {right:0; margin-right:-1px;}
+._FORM_ > ul > li > .put.input > .zishu {top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._FORM_ > ul > li > .put.input > .zishu {background:#222; padding:0 .5em;}
+/* input 的 密码强度 */
+._FORM_ > ul > li > .put.input > .strength {position:relative; height:.9em; width:100%; margin-left:1px;}
+._FORM_ > ul > li > .put.input > .strength:before,
+._FORM_ > ul > li > .put.input > .strength:after {position:absolute; content:""; height:100%; left:0; top:0;}
+._FORM_ > ul > li > .put.input > .strength:before {z-index:2;}
+._FORM_ > ul > li > .put.input > .strength:after {z-index:1;}
+._FORM_ > ul > li > .put.input > .strength:after {width:100%; background:rgba(200,200,200,.2);}
+._FORM_ > ul > li > .put.input > .strength:before {line-height:.9em; text-align:center; color:#fff; font-size:.6em;}
+._FORM_ > ul > li > .put.input > .strength.s0:before {width:0;}
+._FORM_ > ul > li > .put.input > .strength.s1:before {width:33.33%; background:rgba(255,0,0,1); content:"not strong";}
+._FORM_ > ul > li > .put.input > .strength.s2:before {width:66.66%; background:rgba(255,0,0,.5); content:"strong";}
+._FORM_ > ul > li > .put.input > .strength.s3:before {width:100%; background:green; content:"very strong";}
+/* select 的 间距 */
+._FORM_ > ul > li > .put.select > select {margin-left:.5em;}
+._FORM_ > ul > li > .put.select > select:first-child {margin-left:0;}
+/* radioCheckbox */
+._FORM_ > ul > li > .radioCheckbox {position:relative; display:table;}
+._FORM_ > ul > li > .radioCheckbox > span.more {position:absolute; top:.4em; left:100%; margin-left:.5em; white-space:nowrap;}
+._FORM_ > ul > li > .radioCheckbox > span.more > label {cursor:pointer; position:relative; padding-left:1.2em;}
+._FORM_ > ul > li > .radioCheckbox > span.more > label:before {position:absolute; left:0; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._FORM_ > ul > li > .radioCheckbox > span.more > label:before {font-family:awesome; content:"\f078";}
+._FORM_ > ul > li > .radioCheckbox > span.more > label:after {content:"更多";}
+._FORM_ > ul > li > .radioCheckbox > input[type="checkbox"]:checked + span.more > label:before {content:"\f077";}
+._FORM_ > ul > li > .radioCheckbox > input[type="checkbox"]:checked + span.more > label:after {content:"收起";}
+._FORM_ > ul > li > .radioCheckbox > div {max-width:40em; height:2.1em; overflow:hidden;}
+._FORM_ > ul > li > .radioCheckbox > input[type="checkbox"]:checked ~ div {height:auto;}
+._FORM_ > ul > li > .radioCheckbox > div > label {display:inline-block; margin-top:.5em; margin-right:.7em;}
+._FORM_ > ul > li > .radioCheckbox > div > label > span {position:relative; padding-left:1.4em; white-space:nowrap;}
+._FORM_ > ul > li > .radioCheckbox > div > label > span:before,
+._FORM_ > ul > li > .radioCheckbox > div > label > span:after {position:absolute; content:""; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+/*
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="radio"]:checked + span,
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="checkbox"]:checked + span {color:#0578c8;}
+*/
+/* span:before */
+._FORM_ > ul > li > .radioCheckbox > div > label > span:before {left:0;}
+._FORM_ > ul > li > .radioCheckbox > div > label > span:before {width:1em; height:1em;}
+._FORM_ > ul > li > .radioCheckbox > div > label > span:before {border:1px rgba(255,255,255,.4) solid;}
+._FORM_ > ul > li > .radioCheckbox > div > label > span:before {background:rgba(255,255,255,.1);}
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="radio"] + span:before {border-radius:50%;}
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="checkbox"] + span:before {border-radius:0;}
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="radio"]:checked + span:before,
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="checkbox"]:checked + span:before {border:1px #336ce3 solid; background:#336ce3;}
+/* span:after */
+._FORM_ > ul > li > .radioCheckbox > div > label > span:after {opacity:0;}
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="radio"] + span:after {left:.3em;}
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="radio"] + span:after {width:.5em; height:.5em; background:#fff; border-radius:50%;}
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="checkbox"] + span:after {left:.1em; top:45%; color:#fff;}
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="checkbox"] + span:after {font-family:awesome; content:"\f00c";}
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="radio"]:checked + span:after,
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="checkbox"]:checked + span:after {opacity:1;}
+/* radio|checkbox:disabled */
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="radio"]:disabled + span,
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="checkbox"]:disabled + span {color:rgba(255,255,255,.4); cursor:not-allowed;}
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="radio"]:disabled + span:before,
+._FORM_ > ul > li > .radioCheckbox > div > label > input[type="checkbox"]:disabled + span:before {border:1px rgba(255,255,255,.1) solid; background:rgba(255,255,255,.05);}
+
+
+._FORM_ > ul > li > .buttons > *.btn {display:inline-block; height:2.2em; line-height:2.2em; color:#fff; margin-right:1em; border-radius:.3em; padding:0 1.5em; cursor:pointer; opacity:.85;}
+._FORM_ > ul > li > .buttons > *.btn:hover {opacity:1;}
+._FORM_ > ul > li > .buttons > *.btn.white {border:1px rgba(255,255,255,.5) solid; background:rgba(255,255,255,.1);}
+._FORM_ > ul > li > .buttons > *.btn.blue {border:1px #386de4 solid; background:#386de4;}
+._FORM_ > ul > li > .buttons > *.btn.gray {border:1px #777 solid; background:#777;}
+._FORM_ > ul > li > .buttons > *.btn.orange {border:1px orange solid; background:orange;}
+._FORM_ > ul > li > .buttons > *.btn.red {border:1px #f33 solid; background:#f33;}
+._FORM_ > ul > li > .buttons > *.btn.disabled {border:1px #777 solid; background:#777; color:#444; text-shadow:1px 1px 1px #ccc; cursor:not-allowed;}
+._FORM_ > ul > li > .buttons > *.btn.disabled:hover {opacity:.85;}
+

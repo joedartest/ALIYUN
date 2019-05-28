@@ -1,0 +1,5 @@
+# 指定所有搜索引擎
+User-agent : *
+
+# 指定允许访问的目录
+Allow: /autism/page/

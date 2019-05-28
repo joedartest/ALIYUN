@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+.banner {background:rgba(0,0,0,.1);}
+.banner .box {height:10rem; position:relative;}
+.banner .box > * {position:absolute;}
+.banner .box b {width:15rem; height:7.5rem; left:50%; margin-left:-7.5rem; top:50%; margin-top:-3.75rem;}
+.banner .box b {background:url(https://img.alicdn.com/imgextra/i1/10963687/TB2NZvfcTJYBeNjy1zeXXahzVXa_!!10963687.png) center no-repeat; background-size:100% auto;}
+.banner .box span {width:100%; text-align:center; left:0; bottom:.5rem; font-size:1rem;}
+
+.teach {margin-top:.5rem;}
+.teach .teachs {position:relative;}
+.teach .teachs .left {position:absolute; width:150px; top:0; left:0; font-size:.4rem;}
+.teach .teachs .left .step {width:100%;}
+.teach .teachs .left .step label[for="step"] {position:absolute; right:0; bottom:0; visibility:hidden; z-index:3;}
+.teach .teachs .left .step label[for="step"] {width:2.5rem; height:2.5rem; background:orange; border-radius:50%; overflow:hidden;}
+.teach .teachs .left .step label[for="step"] > * {position:absolute; width:100%; height:100%; text-align:center;}
+.teach .teachs .left .step label[for="step"] > *.open {font-size:.8rem; line-height:2.5rem; opacity:1;}
+.teach .teachs .left .step label[for="step"] > *.close {font-size:2.3rem; line-height:2.2rem; color:#212733; opacity:0;}
+.teach .teachs .left .step .steps {width:100%; position:relative; z-index:2;}
+.teach .teachs .left .step .steps > * {display:block; height:100%;}
+.teach .teachs .left .step .steps > * ul {display:block; width:100%; height:100%; background:#2d3544;}
+.teach .teachs .left .step .steps > * ul li a {display:block; position:relative; height:40px; line-height:40px; padding:0 15px; background:rgba(0,0,0,0); color:#999;}
+.teach .teachs .left .step .steps > * ul li a span {position:absolute; height:38px; line-height:38px; font-size:.95em; padding:0 10px; border:1px #394253 solid; background:rgba(39,46,60,.95); top:0; left:100%; margin-left:.125rem; white-space:nowrap; visibility:hidden;}
+.teach .teachs .left .step .steps > * ul li a:hover span {visibility:visible;}
+.teach .teachs .left .step .steps > * ul li a:hover {background:rgba(0,0,0,.05); color:#ccc;}
+.teach .teachs .left .step .steps > * ul li a.active {background:rgba(0,0,0,.15); color:#fff;}
+@media screen and (max-width:768px) {
+	.teach .teachs .left .step {position:fixed; width:0; height:0; right:.5rem; bottom:.5rem;}
+	.teach .teachs .left .step label[for="step"] {visibility:visible;}
+	.teach .teachs .left .step .steps {position:fixed; width:auto; left:0; top:3rem; right:0; bottom:0; visibility:hidden; overflow-x:hidden; opacity:0;}
+	.teach .teachs .left .step .steps > * ul {overflow-y:scroll;}
+	input[type="checkbox"]#step:checked ~ .steps {top:1.5rem;}
+}
+@media screen and (max-width:640px) {
+	.teach .teachs .left .step .steps {top:4rem; visibility:hidden; opacity:0;}
+	input[type="checkbox"]#step:checked ~ .steps {top:2rem;}
+}
+@media screen and (max-width:480px) {.teach .teachs .left {font-size:.6rem;}}
+input[type="checkbox"]#step:checked ~ label[for="step"] > *.open {opacity:0;}
+input[type="checkbox"]#step:checked ~ label[for="step"] > *.close {opacity:1;}
+input[type="checkbox"]#step:checked ~ .steps {visibility:visible; opacity:1;}
+
+.teach .teachs .right {margin-left:170px;}
+@media screen and (max-width:768px) {.teach .teachs .right {margin-left:0;}}
+.teach .teachs .right .block {background:#2d3544; padding:.7rem; font-size:.45rem;}
+.teach .teachs .right .block h1 {margin-bottom:.3rem;}
+.teach .teachs .right .block .part {margin-bottom:30px;}
+.teach .teachs .right .block .part:last-child {margin-bottom:0;}
+.teach .teachs .right .block .part > * {margin-bottom:.2rem;}
+.teach .teachs .right .block .center {text-align:center;}
+.teach .teachs .right .block a {color:orange;}
+.teach .teachs .right .block a:hover {text-decoration:underline;}
+@media screen and (max-width:640px) {
+	.teach .teachs .right .block {padding:.5rem; font-size:.7rem;}
+}
+@media screen and (max-width:480px) {
+	.teach .teachs .right .block .part img.over400 {width:90%;}
+}

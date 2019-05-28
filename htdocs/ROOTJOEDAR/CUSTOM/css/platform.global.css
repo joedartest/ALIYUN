@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+
+._ADMINHEADER_,
+._ADMINHEADER_ > .ADMINHEADER {height:3.5em;}
+._ADMINHEADER_ {position:relative; z-index:11;}
+._ADMINHEADER_ > .ADMINHEADER {position:fixed; width:100%; left:0; top:0; background:#111;}
+
+.ADMINHEADER > * {height:100%;}
+.ADMINHEADER > *.left {float:left; margin-left:1em;}
+.ADMINHEADER > *.left .pageName {position:relative;}
+.ADMINHEADER > *.left .pageName > a {font-size:1.2em; color:#ccc;}
+.ADMINHEADER > *.left .pageName > span {position:absolute; left:100%; margin-left:1em; top:50%; white-space:nowrap; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+.ADMINHEADER > *.left .pageName > span {border-left:1px #ccc solid; padding-left:1em;}
+
+.ADMINHEADER > *.right {float:right; margin-right:1em;}
+.ADMINHEADER > *.right .nameLogout {display:table;}
+.ADMINHEADER > *.right .nameLogout > * {display:inline-block; padding:0 .5em;}
+.ADMINHEADER > *.right .nameLogout > * {border-left:1px #ccc solid;}
+.ADMINHEADER > *.right .nameLogout > *:first-child {border-left:0;}
+
+
+
+._ADMINCONTAIN_ {position:fixed; left:0; top:3.5em; right:0; bottom:0;}
+._ADMINCONTAIN_ > * {position:absolute; height:100%; top:0;}
+._ADMINCONTAIN_ > *.left {width:13em; left:0; background:#303030;}
+._ADMINCONTAIN_ > *.right {left:13em; right:0; background:#fff; color:#333; overflow-y:auto;}
+
+._ADMINCONTAIN_ .MENU > ul li > label {display:block; position:relative; margin-left:1em; height:1.7em; line-height:1.7em; padding-left:1.2em;}
+._ADMINCONTAIN_ .MENU > ul li > label:before {position:absolute; left:0; font-size:.7em; width:1.5em; height:1.5em; line-height:1.5em; text-align:center; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._ADMINCONTAIN_ .MENU > ul li > label:before {font-family:awesome; content:"\f054";}
+._ADMINCONTAIN_ .MENU > ul li > label:before {opacity:.3;}
+._ADMINCONTAIN_ .MENU > ul li > label:hover:before {opacity:1;}
+
+._ADMINCONTAIN_ .MENU > ul li > a {display:block; height:1.7em; line-height:1.7em; color:#ccc;}
+._ADMINCONTAIN_ .MENU > ul li > a.active {background:rgba(255,255,255,.2); color:#fff;}
+
+._ADMINCONTAIN_ .MENU > ul > li > a {padding-left:2.2em;}
+._ADMINCONTAIN_ .MENU input[type="radio"].level1 ~ ul > li > a {padding-left:3em;}
+._ADMINCONTAIN_ .MENU input[type="radio"].level1 ~ ul > li > a > span {font-size:.8em;}
+
+/*._ADMINCONTAIN_ .MENU > ul li > a > span {font-size:.8em;}
+._ADMINCONTAIN_ .MENU > ul > li > ul > li > a {padding-left:2.2em;}*/
+
+
+._ADMINCONTAIN_ .MENU > ul li ul {height:0; overflow:hidden;}
+
+._ADMINCONTAIN_ .MENU input[type="radio"]:checked + label:before {content:"\f078"; opacity:1;}
+._ADMINCONTAIN_ .MENU input[type="radio"]:checked ~ ul {height:auto;}
+
+
+._ADMINCONTAIN_ .contain {padding:1em;}
+
+/* listTable */
+._ADMINCONTAIN_ .listTable table {font-size:.9em;}
+._ADMINCONTAIN_ .listTable table,
+._ADMINCONTAIN_ .listTable table th,
+._ADMINCONTAIN_ .listTable table td {border:1px #ddd solid;}
+._ADMINCONTAIN_ .listTable table {border-right:0; border-bottom:0;}
+._ADMINCONTAIN_ .listTable table th,
+._ADMINCONTAIN_ .listTable table td {border-left:0; border-top:0;}
+._ADMINCONTAIN_ .listTable table th,
+._ADMINCONTAIN_ .listTable table td {padding:.5em 1em; text-align:left;}
+._ADMINCONTAIN_ .listTable table th {background:#f5f5f5;}
+._ADMINCONTAIN_ .listTable table td.checkbox {width:1.8em;}
+._ADMINCONTAIN_ .listTable table input[type="checkbox"] {zoom:1.2;}
+._ADMINCONTAIN_ .listTable table tbody tr:hover {background:#f9f9f9;}
+._ADMINCONTAIN_ .listTable table td.dos {width:8em;}
+._ADMINCONTAIN_ .listTable table td.dos .btn {display:table; color:blue;}
+._ADMINCONTAIN_ .listTable table td.dos .btn:hover {text-decoration:underline;}
+
+._ADMINCONTAIN_ .listTable td.dates {width:10em;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

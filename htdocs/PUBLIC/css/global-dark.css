@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* orange 255,165,0 */
+
+/*html {width:100%; overflow-x:hidden;}*/
+html {height:100%;}
+body {margin:0; padding:0; width:100%; overflow-x:hidden; height:100%; overflow-y:auto; font-family:"microsoft yahei"; background:#212733; color:#fff;}
+ul,ol,li,dl,dt,dd,form,label,pre,code,h1,h2,h3,h4,h5,h6,button,input[type="text"],input[type="tel"],input[type="password"],textarea,select,i {margin:0; padding:0; list-style:none; outline:none; font-family:"microsoft yahei";}
+img {display:block; border:none;}
+a {text-decoration:none; color:#fff; cursor:pointer;}
+code {font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;}
+
+.hide {display:none;}
+.show {display:block;}
+.overScroll {overflow-y:scroll;}
+.overHidden {overflow-y:hidden;}
+.textNoWrap {width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.tran03 {-webkit-transition:all .3s; -moz-transition:all .3s; -o-transition:all .3s; transition:all .3s;}
+input[type="checkbox"].none,
+input[type="radio"].none,
+input[type="file"].none,
+input[type="text"].none {position:fixed; left:-9999px; top:50%;}
+.table table {width:100%;}
+.fixedTop {position:fixed; top:0;}
+.fixedBottom {position:fixed; bottom:0;}
+/* 清除浮动类 .clearfix */
+.clearfix:before,.clearfix:after {content:""; display:table;}
+.clearfix:after {clear:both;}
+
+.coming {height:18rem; line-height:12rem; text-align:center; font-size:1rem;}
+.coming:before {content:"COMING SOON..."; color:rgba(255,165,0,.3);}
+@media screen and (max-width:640px) {.coming {height:23rem;}}
+
+
+.mainWidth {width:1200px; margin:0 auto; position:relative; display:table;}
+@media screen and (max-width:1280px) {.mainWidth {width:990px;}}
+@media screen and (max-width:1024px) {.mainWidth {width:100%;}}
+
+/* big https://img.alicdn.com/imgextra/i4/10963687/TB2iTX4uXXXXXccXXXXXXXXXXXX_!!10963687.png */
+/* small https://img.alicdn.com/imgextra/i1/10963687/TB23y02uXXXXXcMXXXXXXXXXXXX_!!10963687.png */
+/* white https://img.alicdn.com/imgextra/i4/10963687/TB2OWpIuXXXXXbVXpXXXXXXXXXX_!!10963687.png */
+
+/*--------------------------------
+	header层级
+	总体层fixed = 11
+	总体层fixed - bg 	= 1
+	总体层fixed - label = 2
+	总体层fixed - menu	= 2
+--------------------------------*/
+header,header > *.fixed {height:1.5rem; width:100%;}
+header > *.fixed {position:fixed; left:0; top:0; z-index:11; background:rgba(0,0,0,.85);}
+header > *.fixed > *.box {height:100%; width:1200px; margin:0 auto; position:relative; display:table;}
+header > *.fixed > *.box > * {height:100%;}
+header > *.fixed > *.box .logo {float:left; width:120px; overflow: hidden;}
+header > *.fixed > *.box .logo > a {display:block; height:100%; background:url(https://img.alicdn.com/imgextra/i1/10963687/TB23y02uXXXXXcMXXXXXXXXXXXX_!!10963687.png) center center no-repeat;}
+header > *.fixed > *.box .menu {position:relative; margin-left:160px; margin-right:300px; height:100%;}
+header > *.fixed > *.box .menu > .bg {position:fixed; width:100%; height:100%; left:0; top:0; background:rgba(0,0,0,.4); visibility:hidden; z-index:1;}
+header > *.fixed > *.box .menu > label {position:absolute; background:orange; visibility:hidden; z-index:2;}
+header > *.fixed > *.box .menu > label > b {position:absolute; width:100%; height:100%; left:0; top:0; text-align:center;}
+header > *.fixed > *.box .menu > label > b.open {opacity:1;}
+header > *.fixed > *.box .menu > label > b.close {opacity:0;}
+header > *.fixed > *.box .menu .menus {height:100%; z-index:2;}
+header > *.fixed > *.box .menu .menus > ul {display:-webkit-box; display:-moz-box; display:-o-box; display:box; height:100%;}
+header > *.fixed > *.box .menu .menus > ul > li {-webkit-box-flex:1.0; -moz-box-flex:1.0; -o-box-flex:1.0; box-flex:1.0; height:100%;}
+header > *.fixed > *.box .menu .menus > ul > li > * {display:block; position:relative; height:100%; line-height:1.5rem; font-size:.4rem; text-align:center; background:rgba(255,255,255,0);}
+header > *.fixed > *.box .menu .menus > ul > li > * > i {position:absolute; width:100%; height:2px; background:orange; left:0; bottom:0; visibility:hidden;}
+header > *.fixed > *.box .menu .menus > ul > li > *:hover {color:orange;}
+header > *.fixed > *.box .menu .menus > ul > li > *.active {background:rgba(255,255,255,.15); color:orange;}
+header > *.fixed > *.box .menu .menus > ul > li > *.active > i {visibility:visible;}
+header > *.fixed > *.box .other {float:right; width:300px; position:relative; font-size:.35rem;}
+header > *.fixed > *.box .other .nav {position:absolute; width:100%; height:30px; top:50%; margin-top:-15px; right:0;}
+header > *.fixed > *.box .other .nav ul {display:table; width:100%; height:100%;}
+header > *.fixed > *.box .other .nav ul li {float:right; height:100%; line-height:30px; padding:0 10px; white-space:nowrap;}
+header > *.fixed > *.box .other .nav ul li ._qrcode_ {width:30px; height:30px; cursor:pointer; position:relative;}
+header > *.fixed > *.box .other .nav ul li ._qrcode_ {background:url(http://wwwj.com.cn/Public/images/icon-qrcode.png) center no-repeat; background-size:100% auto;}
+header > *.fixed > *.box .other .nav ul li ._qrcode_ > * {position:absolute; width:150px; height:150px; background:#fff; padding:10px; top:100%; margin-top:15px; left:50%; margin-left:-85px; visibility:hidden;}
+header > *.fixed > *.box .other .nav ul li ._qrcode_ > * > * {width:100%; height:100%;}
+header > *.fixed > *.box .other .nav ul li ._qrcode_:hover > * {visibility:visible;}
+header > *.fixed > *.box .other .nav ul li a:hover {text-decoration:underline;}
+header.wide > *.fixed > *.box {width:100%;}
+header.wide > *.fixed > *.box .logo {width:260px;}
+header.wide > *.fixed > *.box .logo > a {background:url(https://img.alicdn.com/imgextra/i4/10963687/TB2iTX4uXXXXXccXXXXXXXXXXXX_!!10963687.png) center center no-repeat;}
+header.wide > *.fixed > *.box .menu {position:relative; margin-left:300px; height:100%;}
+@media screen and (max-width:1280px) {header > *.fixed > *.box {width:990px;}}
+@media screen and (max-width:1024px) {header > *.fixed > *.box {width:100%;}}
+@media screen and (max-width:768px) {
+	header.wide > *.fixed > *.box .logo, header > *.fixed > *.box .logo {float:none; width:100%;}
+	header.wide > *.fixed > *.box .logo > a, header > *.fixed > *.box .logo > a {margin-left:1.5rem;}
+	header.wide > *.fixed > *.box .menu, header > *.fixed > *.box .menu {position:absolute; width:100%; top:0; left:0; margin-left:0; height:0;}
+	header > *.fixed > *.box .menu > label {visibility:visible; width:1.5rem; height:1.5rem;}
+	header > *.fixed > *.box .menu > label > b.open {line-height:1.65rem; font-size:1.125rem;}
+	header > *.fixed > *.box .menu > label > b.close {line-height:1.5rem; font-size:1.65rem;}
+	header > *.fixed > *.box .menu .menus {position:fixed; background:#000; left:100%; top:0; right:0; bottom:0; opacity:0;}
+	header > *.fixed > *.box .menu .menus ul {display:block; height:auto;}
+	header > *.fixed > *.box .menu .menus ul > li > *.active {background:rgba(255,165,0,.3);}
+	header > *.fixed > *.box .menu .menus ul > li > *.active > i {visibility:hidden;}
+	header > *.fixed > *.box .other {display:none;}
+	input[type="checkbox"]#menuSwitch:checked ~ .menus {opacity:1;}
+	input[type="checkbox"]#menuSwitch:checked ~ .menus {left:1.5rem;}
+	input[type="checkbox"]#menuSwitch:checked ~ .bg {visibility:visible;}
+}
+@media screen and (max-width:640px) {
+	header,header > *.fixed {height:2rem; width:100%;}
+	header > *.fixed > *.box .logo > a {margin-left:2rem; height:2rem;}
+	header > *.fixed > *.box .menu > label {width:2rem; height:2rem;}
+	header > *.fixed > *.box .menu > label > b.open {line-height:2.2rem; font-size:1.5rem;}
+	header > *.fixed > *.box .menu > label > b.close {line-height:2rem; font-size:2.2rem;}
+	header > *.fixed > *.box .menu .menus ul > li > * {line-height:2rem; font-size:.75rem;}
+	header > *.fixed > *.box > ._qrcode_ {left:auto; right:10px; display:none;}
+	input[type="checkbox"]#menuSwitch:checked ~ .menus {left:2rem;}
+}
+input[type="checkbox"]#menuSwitch:checked ~ label > b {-webkit-transform:rotate(180deg); -moz-transform:rotate(180deg); transform:rotate(180deg);}
+input[type="checkbox"]#menuSwitch:checked ~ label > b.open {opacity:0;}
+input[type="checkbox"]#menuSwitch:checked ~ label > b.close {opacity:1;}
+
+
+.code {padding:.5rem; line-height:.55rem; border-radius:.125rem;}
+@media screen and (max-width:640px) {.code {line-height:.8rem;}}
+.code {font-family:Consolas;}
+.code > * {display:block;}
+.code > *.i0 {padding-left:0;}
+.code > *.i1 {padding-left:1rem;}
+.code > *.i2 {padding-left:2rem;}
+.code > *.i3 {padding-left:3rem;}
+.code > *.i4 {padding-left:4rem;}
+.code > *.i5 {padding-left:5rem;}
+.code > *.i6 {padding-left:6rem;}
+.code > *.i7 {padding-left:7rem;}
+.code > *.i8 {padding-left:8rem;}
+.code.cmd {background:#000;}
+.code.html,.code.js {background:#272f3d; border:1px #414b5d solid;}
+.code > * .zhushi {margin-left:20px; color:#515867; font-size:16px; font-family:"microsoft yahei";}
+

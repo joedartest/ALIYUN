@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+
+
+._TUTORIAL_.DETAIL > .cover {display:table; margin:0 auto; margin-bottom:2em;}
+._TUTORIAL_.DETAIL > .cover > * {text-align:center; padding:.1em;}
+._TUTORIAL_.DETAIL > .cover > *.info {border-top:1px rgba(150,150,150,.5) solid;}
+._TUTORIAL_.DETAIL > .cover > *.info > * {opacity:.6;}
+
+
+._TUTORIAL_.DETAIL > .process > .pList > .part {margin-bottom:1.5em;}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .head {text-align:center; padding:.5em; background:rgba(150,150,150,.3);}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body {border:1px rgba(150,150,150,.3) solid; padding:1em;}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > .name {float:left; width:6.5em; background:deepskyblue; text-align:center; padding:.2em 0; border-radius:.2em; color:#fff;}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul {margin-left:7em;}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li {margin-bottom:.5em;}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .tit {float:left;}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr {margin-left:3em;}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr > * {display:inline-block; position:relative; margin-left:1.5em;}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr > *:before {position:absolute; font-size:.9em; content:""; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr > *:before {left:0; margin-left:-1.5em; width:1.1em; height:1.1em; line-height:1.1em; text-align:center; border-radius:50%; border:1px rgba(127,127,127,.9) solid; border-top:0; border-bottom:0; color:rgba(127,127,127,.9);}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr > *:nth-of-type(1):before {content:"1";}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr > *:nth-of-type(2):before {content:"2";}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr > *:nth-of-type(3):before {content:"3";}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr > *:nth-of-type(4):before {content:"4";}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr > *:nth-of-type(5):before {content:"5";}
+._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr > *:nth-of-type(6):before {content:"6";}
+@media screen and (max-width:640px) {
+	._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > .name {float:none; margin-bottom:.2em;}
+	._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul {margin-left:0;}
+	._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li {line-height:2em;}
+	._TUTORIAL_.DETAIL > .process > .pList > .part > .body > .con > ul > li > .nr > * {display:block;}
+}
+
+
+._TUTORIAL_.DETAIL > .detail > .aName {height:3.5em;}
+@media screen and (max-width:640px) {
+	._TUTORIAL_.DETAIL > .detail > .aName {height:2.4em;}
+}
+
+._TUTORIAL_.DETAIL > .detail > .catalog {width:50%; display:-webkit-flex; display:flex;}
+._TUTORIAL_.DETAIL > .detail > .catalog > * {flex:1;}
+._TUTORIAL_.DETAIL > .detail > .catalog > * {height:2.4em; line-height:2.4em; text-align:center; color:#fff;}
+/*dodgerblue*/
+._TUTORIAL_.DETAIL > .detail > .catalog > *:nth-of-type(1) {background:rgba(30,144,255,1);}
+._TUTORIAL_.DETAIL > .detail > .catalog > *:nth-of-type(2) {background:rgba(30,144,255,.7);}
+._TUTORIAL_.DETAIL > .detail > .catalog > *:nth-of-type(3) {background:rgba(30,144,255,.4);}
+._TUTORIAL_.DETAIL > .detail > .name {width:50%; height:2.3em; line-height:2.3em; text-align:center; background:rgba(127,127,127,.2);}
+@media screen and (max-width:640px) {
+	._TUTORIAL_.DETAIL > .detail > .catalog,
+	._TUTORIAL_.DETAIL > .detail > .name {width:100%;}
+}
+
+._TUTORIAL_.DETAIL > .detail > .box {font-size:1.1em;}
+._TUTORIAL_.DETAIL > .detail > .box {padding-top:.5em; margin-bottom:2em;}
+._TUTORIAL_.DETAIL > .detail > .box > ul > li {margin-bottom:.5em; line-height:1.5em;}
+._TUTORIAL_.DETAIL > .detail > .box > ul > li > .tit {float:left; width:6em; padding:.1em 0; text-align:center; background:rgba(127,127,127,.2);}
+._TUTORIAL_.DETAIL > .detail > .box > ul > li > .con {margin-left:6.5em;}
+@media screen and (max-width:640px) {
+	._TUTORIAL_.DETAIL > .detail > .box {font-size:1.3em;}
+	._TUTORIAL_.DETAIL > .detail > .box > ul > li > .tit {float:none;}
+	._TUTORIAL_.DETAIL > .detail > .box > ul > li > .con {margin-left:0;}
+}
+
+
+.radioCheckbox {padding-bottom:.2em;}
+.radioCheckbox input[type="radio"],
+.radioCheckbox input[type="checkbox"] {position:fixed; left:-99999px;}
+.radioCheckbox.inline > label {display:inline-block; margin-right:1em;}
+.radioCheckbox.block > label {display:table;}
+.radioCheckbox > label > span {display:inline-block; position:relative; height:1.3em; line-height:1.3em; padding:.2em 0;}
+.radioCheckbox > label > span {padding-left:1.2em; opacity:.7;}
+.radioCheckbox > label > span:before,
+.radioCheckbox > label > span:after {position:absolute; content:""; left:0; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+.radioCheckbox > label > span:before,
+.radioCheckbox > label > span:after {width:.85em; height:.85em; text-align:center; line-height:.85em;}
+.radioCheckbox > label > span:before {border:1px rgba(127,127,127,.5) solid;}
+.radioCheckbox > label > span:after {content:"✓"; opacity:0;}
+.radioCheckbox > label > input[type="radio"] + span:before {border-radius:50%;}
+.radioCheckbox > label > input:checked + span {opacity:1; color:rgba(30,144,255);}
+.radioCheckbox > label > input:checked + span:before {border:1px rgba(30,144,255) solid;}
+.radioCheckbox > label > input:checked + span:after {opacity:1;}
+/*body.dark .radioCheckbox > label > input:checked + span {opacity:1; color:deepskyblue;}
+body.dark .radioCheckbox > label > input:checked + span:before {border:1px deepskyblue solid; background:deepskyblue;}*/
+
+
+/*.radioCheckbox > label > span {display:inline; position:relative;}
+
+.radioCheckbox > label > span:before,
+.radioCheckbox > label > span:after {position:absolute;}
+.radioCheckbox > label > span:before {}
+.radioCheckbox > label > span:after {margin-left:.275em; width:.45em; height:.45em; background:rgba(127,127,127,.8); opacity:0;}
+.radioCheckbox > label > input[type="radio"] ~ span:before,
+.radioCheckbox > label > input[type="radio"] ~ span:after {border-radius:50%;}
+.radioCheckbox > label > input:checked ~ span {color:rgba(30,144,255);}
+.radioCheckbox > label > input:checked ~ span:before {border:1px rgba(30,144,255) solid;}
+.radioCheckbox > label > input:checked ~ span:after {background:rgba(30,144,255); opacity:1;}*/
+
+
+._TUTORIAL_.WORD > .catalog > ul > li {margin-bottom:1px;}
+._TUTORIAL_.WORD > .catalog > ul > li > a {display:table; height:2em; line-height:2em; background:deepskyblue; color:#fff;}
+._TUTORIAL_.WORD > .catalog > ul > li > a {width:15em; padding:0 .5em;}
+@media screen and (max-width:640px) {
+	._TUTORIAL_.WORD > .catalog > ul > li > a {width:94%; padding:0 3%;}
+}
+
+
+._TUTORIAL_.WORD > .part > * {margin-bottom:1em;}
+._TUTORIAL_.WORD > .part > .aName {height:3.5em; margin-bottom:0;}
+@media screen and (max-width:640px) {
+	._TUTORIAL_.WORD > .part > .aName {height:2.4em;}
+}
+
+._TUTORIAL_.WORD > .part > .name {padding:.5em 0; border-bottom:1px rgba(127,127,127,.4) solid; font-weight:bold;}
+
+._TUTORIAL_.WORD > .part > .list > ul > li {margin-bottom:1em;}
+/* .item input[type="text"] */
+._TUTORIAL_.WORD > .part > .list > ul > li > .item input[type="text"] {border:none; outline:none; background:none; width:4em; text-align:center;}
+._TUTORIAL_.WORD > .part > .list > ul > li > .item input[type="text"] {border-bottom:1px rgba(127,127,127,.7) solid;}
+._TUTORIAL_.WORD > .part > .list > ul > li > .item input[type="text"] {color:#222;}
+body.dark ._TUTORIAL_.WORD > .part > .list > ul > li > .item input[type="text"] {color:#fff;}
+
+._TUTORIAL_.WORD > .part > .list > ul > li > .item > *:first-child {float:left; width:1.2em; padding:0 .5em; height:1.5em; line-height:1.5em; text-align:center; background:rgba(127,127,127,.2);}
+._TUTORIAL_.WORD > .part > .list > ul > li > .item > .con {margin-left:2.5em;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

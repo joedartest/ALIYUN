@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.back {position:relative; width:100%; z-index:1;}
+.back span {position:absolute; width:100%; height:833px; background:url(https://img.alicdn.com/imgextra/i1/10963687/TB2_MZGcxWYBuNjy1zkXXXGGpXa_!!10963687.png) top center no-repeat; background-size:auto 100%;}
+@media screen and (max-width:1280px) {.back span {height:695px;}}
+@media screen and (max-width:1024px) {.back span {height:561px;}}
+@media screen and (max-width:640px) {.back span {height:14rem;}}
+
+.myBanner {position:relative; z-index:2;}
+.myBanner .banner {height:600px; position:relative;}
+.myBanner .banner > * {position:absolute;}
+.myBanner .banner .me {width:28%; left:0; bottom:0; z-index:1;}
+.myBanner .banner .me img {width:100%;}
+.myBanner .banner .txtimg {height:100%; width:67%; right:0; top:0; z-index:2}
+.myBanner .banner .txtimg > * {display:table; margin:0 auto;}
+.myBanner .banner .txtimg > *.blank {height:15%;}
+.myBanner .banner .txtimg > *.mark b img {height:120px;}
+.myBanner .banner .txtimg > *.en b {float:left; margin-left:-30px;}
+.myBanner .banner .txtimg > *.en b img {height:120px;}
+.myBanner .banner .txtimg > *.en b:first-child {margin-left:0;}
+.myBanner .banner .txtimg > *.cn b img {height:40px;}
+
+.myBanner .banner .contact {width:67%; right:0; bottom:.5rem; z-index:3;}
+.myBanner .banner .contact .ct {display:table; margin:0 auto;}
+.myBanner .banner .contact .ct > * {float:left; width:1.25rem; height:1.25rem; margin:0 .3rem; background:url(https://img.alicdn.com/imgextra/i3/10963687/TB2CifId25TBuNjSspcXXbnGFXa_!!10963687.png) left top no-repeat; background-size:auto 100%;}
+.myBanner .banner .contact .ct > *.mobile {background-position:0 0;}
+.myBanner .banner .contact .ct > *.qq {background-position:-1.25rem 0;}
+.myBanner .banner .contact .ct > *.wechat {background-position:-2.5rem 0;}
+.myBanner .banner .contact .ct > *.wangwang {background-position:-3.75rem 0;}
+.myBanner .banner .contact .ct > *.email {background-position:-5rem 0;}
+
+
+
+@media screen and (max-width:1280px) {
+	.myBanner .banner {height:495px;}
+	.myBanner .banner .txtimg > *.mark b img {height:100px;}
+	.myBanner .banner .txtimg > *.en b {float:left; margin-left:-25px;}
+	.myBanner .banner .txtimg > *.en b img {height:100px;}
+	.myBanner .banner .txtimg > *.cn b img {height:33px;}
+}
+@media screen and (max-width:1024px) {
+	.myBanner .banner {height:400px;}
+	.myBanner .banner .me {width:auto; height:95%;}
+	.myBanner .banner .me img {width:auto; height:100%;}
+	.myBanner .banner .txtimg > *.mark b img {height:80px;}
+	.myBanner .banner .txtimg > *.en b {float:left; margin-left:-20px;}
+	.myBanner .banner .txtimg > *.en b img {height:80px;}
+	.myBanner .banner .txtimg > *.cn b img {height:30px;}
+}
+@media screen and (max-width:768px) {
+	.myBanner .banner .me {width:auto; height:100%;}
+	.myBanner .banner .me img {width:auto; height:100%;}
+	.myBanner .banner .txtimg > *.blank {height:5%;}
+	.myBanner .banner .txtimg > *.mark b img {height:100px;}
+	.myBanner .banner .txtimg > *.en b {float:none; margin-left:auto; display:table; margin:0 auto;}
+	.myBanner .banner .txtimg > *.en b:first-child {margin-left:auto;}
+	.myBanner .banner .txtimg > *.en b.dot {display:none;}
+	.myBanner .banner .txtimg > *.en b.engineer {margin-top:-.5rem;}
+	.myBanner .banner .txtimg > *.en b img {height:80px;}
+	.myBanner .banner .txtimg > *.cn b img {height:30px;}
+}
+@media screen and (max-width:640px) {
+	.myBanner .banner {height:10rem;}
+	.myBanner .banner .txtimg > *.blank {height:5%;}
+	.myBanner .banner .txtimg > *.mark b img {height:2.5rem;}
+	.myBanner .banner .txtimg > *.en b img {height:2rem;}
+	.myBanner .banner .txtimg > *.cn b img {height:.75rem;}
+}
+
+
+.resume {position:relative; z-index:2;}
+.resume .box {min-height:1200px; background:#111; padding:.5rem; border:.25rem #444 solid;}
+.resume .box .part {margin-bottom:.5rem;}
+.resume .box .part .tit {height:1rem; line-height:1rem; border-bottom:1px #454545 dashed; font-size:.6rem; margin-bottom:.25rem;}
+.resume .box .part .tit > * {display:inline-block; margin-right:.25rem;}
+/*.resume .box .part .tit > b {font-family:MingHei; font-weight:normal;}*/
+.resume .box .part .tit > span {font-family:Walkway_Expand; font-size:.45rem; color:darkorange;}
+.resume .box .part .con .conTxt {font-size:.4rem; color:#ccc;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

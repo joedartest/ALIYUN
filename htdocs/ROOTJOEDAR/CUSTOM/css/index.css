@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+._RUNRECORD_ {margin-top:.5em;}
+._RUNRECORD_ > .runrecord {position:relative; height:26em; background:url(/personal/images/map/guangzhou/001.jpg) center no-repeat; background-size:cover;}
+
+._RUNRECORD_ > .runrecord > * {position:absolute; width:93%; left:3.5%;}
+
+._RUNRECORD_ > .runrecord > *.run-head {border-bottom:1px rgba(255,255,255,.4) solid; height:20%;}
+._RUNRECORD_ > .runrecord > *.run-head > * {position:absolute;}
+._RUNRECORD_ > .runrecord > *.run-head > *.km {bottom:.3em; left:0;}
+
+
+/*===============================
+		通用的布局
+===============================*/
+._GENERIC_ {padding-top:1em;}
+/*----- 通用布局 - 主体部分 -----*/
+._GENERIC_ > .MAINPART {width:670px;}
+/*----- 通用布局 - 次要部分 -----*/
+._GENERIC_ > .MINOR {float:right; width:300px; margin-top:0;}
+
+
+._GENERIC_ > .MAINPART > * {margin-top:1.5em;}
+._GENERIC_ > .MAINPART > *:first-child {margin-top:0;}
+
+
+
+
+._SUBJECT_ {background:rgba(0,0,0,.3);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

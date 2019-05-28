@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#191919">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>404 您访问的页面不存在哦！</title>
+<style type="text/css">
+@charset "utf-8";
+html {width:100%; height:100%;}
+body {width:100%; height:100%; margin:0; padding:0; overflow-x:hidden;}
+a {text-decoration:none; cursor:pointer;}
+body {background:url(/NotFound/img/bg.jpg); position:relative; color:#fff;}
+._FS_ {font-size:.55rem;}
+@media screen and (max-width:640px) {._FS_ {font-size:.7rem;}}
+._NF_ {position:fixed;}
+._NF_ {width:100%; left:0;}
+._NF_ {top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._NF_ > .contain {display:table; margin:0 auto; text-align:center;}
+._NF_ > .contain .code {font-size:7em; font-weight:bold;}
+._NF_ > .contain .reason {text-align:left; margin-bottom:2em;}
+._NF_ > .contain .reason > * {font-size:.8em;}
+._NF_ > .contain .color {color:orange; font-weight:bold;}
+._NF_ > .contain .go {margin-bottom:1em;}
+</style>
+</head>
+<body>
+
+<div class="_FS_ _NF_">
+	<div class="contain">
+		<div class="title">实在抱歉，您访问的页面不存在哦</div>
+		<div class="code">404</div>
+		<div class="reason">
+			<span>
+				可能有以下原因：
+				<br>1、您访问的地址不正确
+				<br>2、该页面根本就没有存在于这个世界上
+				<br>3、该页面可能还在建设中
+				<br>4、该站长可能把地址写错了
+			</span>
+		</div>
+		<div class="go">无论怎样，<b class="color" id="second"></b> 秒钟之后帮您返回首页</div>
+		<div class="go">或者 <a href="/" class="color">点击此处</a> 直接返回首页</div>
+	</div>
+</div>
+
+
+<script src="/JS.rem"></script>
+<script type="text/javascript">
+var _NF_ = _NF_ || {};
+_NF_ = (function(){
+	return {
+		init : function(){this.n = 5; this.countDown()}
+		,countDown : function(){
+			document.getElementById('second').innerHTML = this.n;
+			this.n--;
+			setTimeout(function(){_NF_.countDown()},1e3);
+			if(this.n < 1){location.href = '/'}
+		}
+	}
+}());
+_NF_.init();
+</script>
+</body>
+</html>

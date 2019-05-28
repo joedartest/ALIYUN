@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+
+._UCENTER_ {position:relative; margin-top:1em;}
+
+
+._UCENTER_ > .LEFTMENU {position:absolute; width:11em;}
+._UCENTER_ > .RIGHTCON {margin-left:11.8em;}
+@media screen and (max-width:640px) {
+	._UCENTER_ > .LEFTMENU {position:fixed; right:.5em; bottom:.5em;}
+	._UCENTER_ > .RIGHTCON {margin-left:0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

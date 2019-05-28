@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+
+._UCENTER_ > .contain {margin-left:14em;}
+._UCENTER_ > .contain {position:relative;}
+._UCENTER_ .UC_MENU {position:absolute; width:13em; top:0; right:100%; margin-right:1em;}
+._UCENTER_ > .contain > * {margin-top:1em; padding:1em;}
+._UCENTER_ > .contain > *:first-child,
+._UCENTER_ > .contain > *.UC_MENU {margin-top:0;}
+._UCENTER_ > .contain > *.UC_MENU {padding:0;}
+@media screen and (max-width:640px) {
+	._UCENTER_ > .contain {margin-left:0;}
+	._UCENTER_ > .contain > *.broad {padding:1em 0;}
+	._UCENTER_ .UC_MENU {position:relative; width:auto; top:auto; right:auto; margin-right:0;}
+
+}
+
+
+.ucMenu > .part ul > li > label {display:block; height:2.3em; line-height:2.3em; cursor:pointer;}
+.ucMenu > .part ul > li > a {display:block; height:2.3em; line-height:2.3em;}
+.ucMenu > .part > ul > li > label,
+.ucMenu > .part > ul > li > a {padding-left:1.5em;}
+.ucMenu > .part > ul ul > li > a {padding-left:2.5em;}
+.ucMenu > .part ul > li > label,
+.ucMenu > .part ul > li > a {color:rgba(127,127,127,.8);}
+.ucMenu > .part ul > li > label:hover,
+.ucMenu > .part ul > li > a:hover {background:rgba(0,191,255,.1); color:rgba(127,127,127,1);}
+.ucMenu > .part ul > li > a.active {background:rgba(0,191,255,.25); color:#222;}
+body.dark .ucMenu > .part ul > li > a.active {color:#fff;}
+.ucMenu > .part > input[type="radio"][name="menuPart"] + ul ul {height:0; overflow:hidden;}
+.ucMenu > .part > input[type="radio"][name="menuPart"]:checked + ul ul {height:auto;}
+.ucMenu > .part > input[type="radio"][name="menuPart"]:checked + ul > li > label {background:deepskyblue; color:#fff;}
+.ucMenu > .part li > label,
+.ucMenu > .part li > a {position:relative;}
+.ucMenu > .part li > label:before,
+.ucMenu > .part li > a:before {position:absolute; height:1.6em; line-height:1.6em; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%);}
+.ucMenu > .part li > label:before {font-family:awesome; content:"\f107";}
+.ucMenu > .part li > a:before {font-family:awesome; content:"\f105";}
+.ucMenu > .part li > label:before,
+.ucMenu > .part li > a:before {right:9999em;}
+@media screen and (max-width:640px) {
+	.ucMenu > .part ul > li > label,
+	.ucMenu > .part ul > li > a {height:3.2em; line-height:3.2em;}
+	.ucMenu > .part > ul > li > label,
+	.ucMenu > .part > ul > li > a {padding-left:1em;}
+	.ucMenu > .part > ul ul > li > a {padding-left:2em;}
+	.ucMenu > .part ul > li > label,
+	.ucMenu > .part li a {border-top:1px rgba(127,127,127,.15) solid;}
+	.ucMenu > .part ul > li > label,
+	.ucMenu > .part ul > li > a {color:#222;}
+	.ucMenu > .part ul > li > label:hover,
+	.ucMenu > .part ul > li > a:hover {background:none;}
+	.ucMenu > .part ul > li > a.active {background:none;}
+	.ucMenu > .part > input[type="radio"][name="menuPart"]:checked + ul > li > label {background:rgba(0,191,255,.15); color:#222;}
+	body.dark .ucMenu > .part ul > li > label,
+	body.dark .ucMenu > .part ul > li > a {color:#fff;}
+	body.dark .ucMenu > .part > input[type="radio"][name="menuPart"]:checked + ul > li > label {background:rgba(127,127,127,.15); color:#fff;}
+	.ucMenu > .part li > label:before,
+	.ucMenu > .part li > a:before {right:1em;}
+}
+
+
+.ucHeadimg {height:6em; position:relative;}
+.ucHeadimg > .avatar {float:left; width:6em; height:6em;}
+.ucHeadimg > .info {margin-left:7em; height:inherit;}
+.ucHeadimg > .abs {position:absolute; right:0; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%); z-index:2;}
+.ucHeadimg > .info .textBig {height:2.5em; line-height:2.5em;}
+.ucHeadimg > .info .textBig > * {font-size:1.1em;}
+.ucHeadimg > .info .textSmall > * {font-size:.9em; opacity:.7;}
+.ucHeadimg > .abs > a.upload {color:deepskyblue;}
+.ucHeadimg > .abs > a.upload:before {content:"上传头像";}
+@media screen and (max-width:640px) {
+	.ucHeadimg > .abs > a.upload {display:block; width:2em; height:2em; line-height:2em; text-align:right;}
+	.ucHeadimg > .abs > a.upload:before {font-family:awesome; content:"\f105"; font-size:1.3em;}
+}
+
+
+/*---------------------
+     用户头像部分
+---------------------*/
+.userAvatar {width:8em; height:8em; margin:0 auto;}
+
+
+
+._FORM_ {padding:0 .5em;}
+._FORM_ > .part {padding-top:1.6em;}
+._FORM_ > .part:first-child {padding-top:0;}
+/*@media screen and (max-width:640px) {
+	._FORM_ > .part {padding-top:1.8em;}
+}*/
+._FORM_ > .part > * {min-height:2.2em;}
+._FORM_ > .part > .name {float:left; position:relative; line-height:2.2em;}
+._FORM_ > .part > .name:before {position:absolute; right:0; top:0; height:2.2em; line-height:2.2em;}
+._FORM_ > .part > .name:before {content:":";}
+/*--- 表单左右的宽度比 ---*/
+._FORM_ > .part > .name {width:10%; padding-right:1%;}
+._FORM_ > .part > .con {margin-left:12%; width:85%;}
+@media screen and (max-width:640px) {
+	._FORM_ > .part > .name {width:18.5%; padding-right:1%;}
+	._FORM_ > .part > .name > * {font-size:.9em;}
+	._FORM_ > .part > .con {margin-left:22%; width:77%;}
+}
+._FORM_ > .part > .con > .item {position:relative; display:inline-block;}
+/*--- input|select 样式 ---*/
+._FORM_ > .part > .con > .item > select,
+._FORM_ > .part > .con > .item > input[type="text"] {height:2.2em; font-size:.95em; border:none; outline:none; background:none;}
+._FORM_ > .part > .con > .item > select,
+._FORM_ > .part > .con > .item > input[type="text"] {color:#333;}
+._FORM_ > .part > .con > .item > select,
+._FORM_ > .part > .con > .item > input[type="text"],
+._FORM_ > .part > .con > .item > input[type="text"][readonly] {border-bottom:1px rgba(127,127,127,.5) solid;}
+._FORM_ > .part > .con > .item > select.error,
+._FORM_ > .part > .con > .item > input[type="text"].error {border-bottom:1px #f33 solid;}
+._FORM_ > .part > .con > .item > select:focus,
+._FORM_ > .part > .con > .item > input[type="text"]:focus {border-bottom:1px rgba(127,127,127,1) solid;}
+._FORM_ > .part > .con > .item > input[type="text"][readonly]:focus {border-bottom:1px rgba(127,127,127,.5) solid;}
+body.dark ._FORM_ > .part > .con > .item > select,
+body.dark ._FORM_ > .part > .con > .item > input[type="text"] {color:#fff;}
+body.dark ._FORM_ > .part > .con > .item > select > option {background:#333;}
+/*--- input 样式 ---*/
+._FORM_ > .part > .con > .item > input[type="text"] {width:20em;}
+._FORM_ > .part > .con > .item > input[type="text"].short {width:15em;}
+._FORM_ > .part > .con > .item > input[type="text"].shorter {width:10em;}
+._FORM_ > .part > .con > .item > input[type="text"].long {width:25em;}
+._FORM_ > .part > .con > .item > input[type="text"].longer {width:30em;}
+/*--- select 样式 ---*/
+._FORM_ > .part > .con > .item > select {margin-left:.3em;}
+._FORM_ > .part > .con > .item > select:first-child {margin-left:0;}
+/*--- 表单提示 样式 ---*/
+._FORM_ > .part > .con > .item > .tip {position:absolute;}
+._FORM_ > .part > .con > .item > .tip {left:100%; margin-left:.5em;}
+._FORM_ > .part > .con > .item > .tip {top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._FORM_ > .part > .con > .item > .tip {padding-left:1.2em;}
+._FORM_ > .part > .con > .item > .tip:before {position:absolute; left:0; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+._FORM_ > .part > .con > .item > .tip:before {width:1em; height:1em; text-align:center; line-height:1em;}
+._FORM_ > .part > .con > .item > .tip:before {font-family:awesome;}
+._FORM_ > .part > .con > .item > .tip.ok {color:green;}
+._FORM_ > .part > .con > .item > .tip.ok:before {content:"\f00c";}
+._FORM_ > .part > .con > .item > .tip.error {color:#f33;}
+._FORM_ > .part > .con > .item > .tip.error:before {content:"\f00d";}
+._FORM_ > .part > .con > .item > .tip.ok > *,
+._FORM_ > .part > .con > .item > .tip.error > * {white-space:nowrap; display:block; font-size:.9em; height:1.4em; line-height:1.4em;}
+@media screen and (max-width:640px) {
+	._FORM_ > .part > .con > .item > .tip {position:relative; left:0; margin-left:0;}
+	._FORM_ > .part > .con > .item > .tip {top:auto; -webkit-transform:translateY(0); transform:translateY(0);}
+}
+/*--- (radio|checkbox) 样式 ---*/
+._FORM_ > .part > .con > .item > .labelRadioCheckbox > label {float:left; margin-top:.25em; margin-right:.5em; cursor:pointer;}
+._FORM_ > .part > .con > .item > .labelRadioCheckbox > label > span {display:block; font-size:.9em; border:1px rgba(127,127,127,.5) solid; overflow:hidden;}
+._FORM_ > .part > .con > .item > .labelRadioCheckbox > label > span {height:1.8em; line-height:1.9em;}
+._FORM_ > .part > .con > .item > .labelRadioCheckbox > label > input[type="checkbox"] + span {padding:0 .9em; border-radius:.2em;}
+._FORM_ > .part > .con > .item > .labelRadioCheckbox > label > input[type="radio"] + span {padding:0 1em; border-radius:.9em;}
+._FORM_ > .part > .con > .item > .labelRadioCheckbox > label > input:checked + span {border:1px deepskyblue solid; background:deepskyblue; color:#fff;}
+/*--- textarea 样式 ---*/
+._FORM_ > .part > .con > .item.ta {padding-top:.5em;}
+._FORM_ > .part > .con > .item.ta > textarea {width:40em; height:15em; padding:.5em; resize:none;}
+._FORM_ > .part > .con > .item.ta > textarea {border:1px rgba(127,127,127,.5) solid; border-radius:.2em;}
+._FORM_ > .part > .con > .item.ta > textarea {background:none; color:#333;}
+._FORM_ > .part > .con > .item.ta > textarea.error {border:1px #f33 solid;}
+._FORM_ > .part > .con > .item.ta > textarea:focus {border:1px rgba(127,127,127,1) solid;}
+body.dark ._FORM_ > .part > .con > .item.ta > textarea {background:none; color:#fff;}
+body.dark ._FORM_ > .part > .con > .item.ta > textarea:focus {background:rgba(127,127,127,.04);}
+._FORM_ > .part > .con > .item.ta > .tip {position:relative; left:0; margin-left:0;}
+._FORM_ > .part > .con > .item.ta > .tip {top:auto; -webkit-transform:translateY(0); transform:translateY(0);}
+@media screen and (max-width:640px) {
+	._FORM_ > .part > .con > .item.ta {display:block; width:100%;}
+	._FORM_ > .part > .con > .item.ta > textarea {width:95%; height:10em;}
+}
+/*--- 手机端下 右侧宽度100% ---*/
+@media screen and (max-width:640px) {
+	._FORM_ > .part > .con > .item.put {display:block; width:100%;}
+	._FORM_ > .part > .con > .item.put > input[type="text"] {width:100%;}
+}
+/*--- 表单提交按钮 ---*/
+._FORM_ > .button {padding:1.5em 0;}
+._FORM_ > .button > .btns {display:table; margin:0 auto;}
+._FORM_ > .button > .btns > * {display:inline-block; margin:0 .5em; height:2.4em; line-height:2.4em; padding:0 1.2em;}
+._FORM_ > .button > .btns > * {color:#fff; border-radius:.2em; cursor:pointer;}
+._FORM_ > .button > .btns > *.blue {background:deepskyblue;}
+._FORM_ > .button > .btns > *.red {background:#f66;}
+._FORM_ > .button > .btns > *.disabled {background:rgba(127,127,127,.5); color:rgba(255,255,255,.7); cursor:not-allowed;}
+@media screen and (max-width:640px) {
+	._FORM_ > .button > .btns {display:block;}
+	._FORM_ > .button > .btns > * {display:table; width:100%; margin:0; padding:0; text-align:center; border-radius:0; margin-bottom:.5em;}
+}
+
+
+
+
+
