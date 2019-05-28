@@ -10,9 +10,7 @@
 </head>
 <body>
 
-
 <div id="_HEADER_"></div>
-<script src="/autism/js/front/header?<?php echo time() ?>"></script>
 	
 
 
