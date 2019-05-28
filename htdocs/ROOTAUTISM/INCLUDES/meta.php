@@ -34,6 +34,6 @@ s.parentNode.insertBefore(hm,s);
 <link rel="stylesheet" href="/CSS.global?v=<?php echo time() ?>">
 <link rel="stylesheet" href="/autism/css/global?v=<?php echo time() ?>">
 <link rel="shortcut icon" type="image/x-icon" href="/ico.<?php echo HOST('n') ?>.autism?<?php echo time() ?>">
-<script src="/VUE.dev-v.2.5.17" data-title="vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue" data-title="vue"></script>
 <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
