@@ -11,8 +11,6 @@
 <body>
 
 <div id="_HEADER_"></div>
-	
-
 
 
 <div class="_FS_ _MW_">
